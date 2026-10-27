@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+<meta charset="utf-8">
+    <title>Flight deals | Travel Agency</title>
+<meta name="description" content="Flight deals on popular routes, with filters for stops, times and airlines.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="../../../../../cdn.jsdelivr.net/npm/bootstrap%405.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link href="../../../../../cdn.jsdelivr.net/npm/%40fortawesome/fontawesome-free%407.3.1/css/all.min.css" rel="stylesheet" integrity="sha384-qrALq7+6jBOZIQsNnT6xGkMDru64qD6uTlDra39xrt2SoXl4pO3FX6Roz/RpR/BS" crossorigin="anonymous">
+<link href="../../../../../cdn.jsdelivr.net/npm/animate.css%404.1.1/animate.min.css" rel="stylesheet" integrity="sha384-Gu3KVV2H9d+yA4QDpVB7VcOyhJlAVrcXd0thEjr4KznfaFPLe0xQJyonVxONa4ZC" crossorigin="anonymous">
+<link href="../../../../../cdn.jsdelivr.net/npm/swiper%4014.3.0/swiper-bundle.min.css" rel="stylesheet" integrity="sha384-xkKzAc7JSlGq3SLCZHugx/i0gfYZf6kaFzg3v9/wz0HtsAFYPLz7aUvCFTac8KBk" crossorigin="anonymous">
+<link rel="preload" href="fonts/raleway-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link href="css/style.css" rel="stylesheet">
+<link href="css/results.css" rel="stylesheet">
+</head>
+<body class="not-front page-post">
+
+<div id="main">
+<a class="skip-link" href="#page-content">Skip to main content</a>
+
+    <div class="top1_wrapper" role="region" aria-label="Contact details and language">
+        <div class="container">
+            <div class="top1 clearfix">
+                <div class="email1"><i class="fa-regular fa-envelope" aria-hidden="true"></i><a href="mailto:support@example.com">support@example.com</a></div>
+                <div class="phone1"><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+19175550100">+1 917 555 0100</a></div>
+                <div class="social_wrapper">
+                    <ul class="social clearfix">
+                        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Vimeo"><i class="fa-brands fa-square-vimeo" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="lang1">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false"><img class="flag" src="images/flags/gb.svg" width="20" height="12" alt="">English
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a class="dropdown-item" href="#" lang="de"><img class="flag" src="images/flags/de.svg" width="20" height="12" alt="">Deutsch</a></li>
+                            <li><a class="dropdown-item" href="#" lang="ru"><img class="flag" src="images/flags/ru.svg" width="20" height="12" alt="">Русский</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="top2_wrapper">
+        <div class="container">
+            <div class="top2 clearfix">
+                <header>
+                    <div class="logo_wrapper">
+                        <a href="index.html" class="logo">
+                            <img src="images/logo.svg" width="190" height="94" alt="Travel Agency" class="img-fluid">
+                        </a>
+                    </div>
+                </header>
+                <nav class="navbar navbar_ navbar-default" aria-label="Main menu">
+                    <button type="button" class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                        <span class="visually-hidden">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-collapse navbar-collapse_ collapse">
+                        <ul class="nav navbar-nav sf-menu clearfix">
+                            <li class="sub-menu sub-menu-1"><a href="#">Home<em></em></a>
+                                <ul>
+                                    <li><a href="index.html">Home Version 1</a></li>
+                                    <li><a href="index-2.html">Home Version 2 (slideshow)</a></li>
+                                    <li><a href="index-1.html">Home Version 3 (video)</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li class="sub-menu sub-menu-1 has-mega active"><a href="#">Pages<em></em></a>
+                                <ul class="mega">
+                                  <li class="mega__col">
+                                    <span class="mega__title">Search and results</span>
+                                    <ul>
+                                      <li><a href="flights.html">Flights</a></li>
+                                      <li><a href="search-deals.html">Flight deals</a></li>
+                                      <li><a href="search-flights.html">Search flights</a></li>
+                                      <li><a href="hotels.html">Hotels</a></li>
+                                      <li><a href="search-hotel.html">Search hotels</a></li>
+                                      <li><a href="cars.html">Rent a car</a></li>
+                                      <li><a href="search-cars.html">Search cars</a></li>
+                                      <li><a href="cruises.html">Cruises</a></li>
+                                      <li><a href="search-cruise.html">Search cruises</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="mega__col">
+                                    <span class="mega__title">Booking</span>
+                                    <ul>
+                                      <li><a href="booking-flights.html">Flight details</a></li>
+                                      <li><a href="booking-hotel.html">Hotel details</a></li>
+                                      <li><a href="booking-cars.html">Car details</a></li>
+                                      <li><a href="booking-cruise.html">Cruise details</a></li>
+                                      <li><a href="review.html">Review your trip</a></li>
+                                      <li><a href="booking-hotel-page.html">Checkout</a></li>
+                                      <li><a href="booking-success.html">Booking confirmed</a></li>
+                                      <li><a href="manage-booking.html">Manage a booking</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="mega__col">
+                                    <span class="mega__title">Account</span>
+                                    <ul>
+                                      <li><a href="sign-in.html">Sign in</a></li>
+                                      <li><a href="account.html">Account and profile</a></li>
+                                      <li><a href="trips.html">My trips</a></li>
+                                      <li><a href="trip.html">Trip details</a></li>
+                                      <li><a href="inbox.html">Inbox</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="mega__col">
+                                    <span class="mega__title">Explore and more</span>
+                                    <ul>
+                                      <li><a href="destinations.html">Destinations</a></li>
+                                      <li><a href="destination.html">Destination guide</a></li>
+                                      <li><a href="help.html">Help center</a></li>
+                                      <li><a href="profile0027.html?member=jynda">Our team</a></li>
+                                      <li><a href="privacy.html">Privacy policy</a></li>
+                                      <li><a href="terms.html">Terms &amp; conditions</a></li>
+                                      <li><a href="404.html">Page not found</a></li>
+                                      <li><a href="components.html">Components</a></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                            </li>
+
+                            <li class="sub-menu sub-menu-1"><a href="#">Blog<em></em></a>
+                                <ul>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="post.html">Blog Post</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+<main id="page-content" tabindex="-1">
+
+
+    <div id="google_map2_wrapper"><div id="google_map2" class="google-map" data-lat="41.8156306" data-lng="24.9616722" data-zoom="7" data-style="teal"></div></div>
+
+    <div class="breadcrumbs1_wrapper">
+        <div class="container">
+            <div class="breadcrumbs1"><a href="index.html">Home</a><span>/</span><a href="flights.html">Flights</a><span>/</span>Flight deals</div>
+        </div>
+    </div>
+
+
+    <div id="content">
+        <div class="container">
+            <h1 class="results-title">Flight deals</h1>
+
+            <div class="row">
+                <div class="col-sm-3 results-side">
+                    <form action="https://template-preview.com/templates/travel-agency/preview/v1/search-deals.html" method="get" class="trip-card" novalidate data-search data-prefill aria-labelledby="trip-card-title">
+                        <h2 class="trip-card__title" id="trip-card-title">Your trip</h2>
+                        <div class="trip-card__opts">
+                            <div class="opt" data-menu data-role="trip">
+                                <input type="hidden" name="trip" value="roundtrip">
+                                <button class="opt__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="rs-fl-trip-list"><i class="fa-solid fa-right-left" aria-hidden="true"></i><span class="opt__label">Round trip</span><i class="fa-solid fa-chevron-down opt__chev" aria-hidden="true"></i></button>
+                                <ul class="sf-pop opt__list" id="rs-fl-trip-list" role="listbox" aria-label="Trip type" hidden>
+                                    <li role="option" tabindex="-1" data-value="roundtrip" aria-selected="true">Round trip</li>
+                                    <li role="option" tabindex="-1" data-value="oneway" aria-selected="false">One way</li>
+                                </ul>
+                            </div>
+                            <div class="opt" data-menu>
+                                <input type="hidden" name="cabin" value="economy">
+                                <button class="opt__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="rs-fl-cabin-list"><i class="fa-solid fa-couch" aria-hidden="true"></i><span class="opt__label">Economy</span><i class="fa-solid fa-chevron-down opt__chev" aria-hidden="true"></i></button>
+                                <ul class="sf-pop opt__list" id="rs-fl-cabin-list" role="listbox" aria-label="Cabin class" hidden>
+                                    <li role="option" tabindex="-1" data-value="economy" aria-selected="true">Economy</li>
+                                    <li role="option" tabindex="-1" data-value="premium" aria-selected="false">Premium economy</li>
+                                    <li role="option" tabindex="-1" data-value="business" aria-selected="false">Business</li>
+                                    <li role="option" tabindex="-1" data-value="first" aria-selected="false">First class</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sf sf--dates" data-dates data-offset="14" data-length="7" data-labels="Depart,Return" data-title="Flight dates">
+                            <span class="sf__label" aria-hidden="true">Dates</span>
+                            <div class="sf__box">
+                                <i class="fa-regular fa-calendar sf__icon" aria-hidden="true"></i>
+                                <button class="sf__btn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="rs-fl-dates-pop"><span class="visually-hidden">Dates: </span><span class="sf__value"></span></button>
+                            </div>
+                            <input type="hidden" name="depart" data-start><input type="hidden" name="return" data-end>
+                            <div class="sf-pop sf-cal" id="rs-fl-dates-pop" role="dialog" aria-label="Choose flight dates" hidden></div>
+                        </div>
+                        <div class="sf sf--trav" data-travelers data-title="Travelers">
+                            <span class="sf__label" aria-hidden="true">Travelers</span>
+                            <div class="sf__box">
+                                <i class="fa-regular fa-user sf__icon" aria-hidden="true"></i>
+                                <button class="sf__btn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="rs-fl-trav-pop"><span class="visually-hidden">Travelers: </span><span class="sf__value"></span></button>
+                            </div>
+                            <div class="sf-pop sf-trav" id="rs-fl-trav-pop" role="dialog" aria-label="Travelers" hidden></div>
+                        </div>
+                        <p class="search__error" role="alert"></p>
+                        <button type="submit" class="visually-hidden-focusable trip-card__go">Update results</button>
+                    </form>
+                    <div class="filters-panel" id="results-filters">
+                        <div class="filters-sheet__head"><span id="filters-sheet-title">Filters</span><button type="button" class="filters-sheet__close" aria-label="Close filters"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div>
+                        <div class="filters-head">
+                            <h2 class="filters-title">Filter results</h2>
+                            <button type="button" class="link-btn filters-clear">Clear all</button>
+                        </div>
+                        <ul class="ul3 filters">
+                        <li><details class="filter" open><summary>Stops</summary><div class="filter__body"><ul class="filter-list"><li><label class="fchk"><input type="checkbox" name="stops" value="0"><span>Nonstop</span></label></li><li><label class="fchk"><input type="checkbox" name="stops" value="1"><span>1 stop</span></label></li><li><label class="fchk"><input type="checkbox" name="stops" value="2"><span>2+ stops</span></label></li></ul></div></details></li>
+                        <li><details class="filter" open><summary>Departure time</summary><div class="filter__body"><ul class="filter-list"><li><label class="fchk"><input type="checkbox" name="depart_time" value="morning"><span>Morning <small>5am – 12pm</small></span></label></li><li><label class="fchk"><input type="checkbox" name="depart_time" value="afternoon"><span>Afternoon <small>12pm – 6pm</small></span></label></li><li><label class="fchk"><input type="checkbox" name="depart_time" value="evening"><span>Evening <small>6pm – 11pm</small></span></label></li><li><label class="fchk"><input type="checkbox" name="depart_time" value="night"><span>Night <small>11pm – 5am</small></span></label></li></ul></div></details></li>
+                        <li><details class="filter"><summary>Airlines</summary><div class="filter__body"><ul class="filter-list"><li><label class="fchk"><input type="checkbox" name="airline" value="bluefinch"><span>Bluefinch Air</span></label></li><li><label class="fchk"><input type="checkbox" name="airline" value="northwind"><span>Northwind Airways</span></label></li><li><label class="fchk"><input type="checkbox" name="airline" value="coral"><span>Coral Air</span></label></li><li><label class="fchk"><input type="checkbox" name="airline" value="meridian"><span>Meridian Jet</span></label></li></ul></div></details></li>
+                        <li><details class="filter"><summary>Price range</summary><div class="filter__body"><div class="filter-price"><label><span>Min</span><input type="number" name="price_min" min="0" step="50" placeholder="$0" inputmode="numeric"></label><span class="filter-price__dash" aria-hidden="true">–</span><label><span>Max</span><input type="number" name="price_max" min="0" step="50" placeholder="$2,000" inputmode="numeric"></label></div></div></details></li>
+                        </ul>
+                        <div class="filters-sheet__foot"><button type="button" class="link-btn filters-clear filters-clear--sheet">Clear all</button><button type="button" class="filters-sheet__show">Show <span data-results-count></span> results</button></div>
+                    </div>
+
+                    <div class="sm_slider sm_slider1">
+                        <button type="button" class="sm_slider_prev" aria-label="Previous"></button>
+                        <button type="button" class="sm_slider_next" aria-label="Next"></button>
+                        <div class="">
+                            <div class="carousel-box">
+                                <div class="inner">
+                                    <div class="carousel main swiper">
+<ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <div class="sm_slider_inner">
+                                                    <div class="txt1">Our agent rebooked us within an hour when our connecting flight was canceled, and we still made the first night of the cruise. I would not book a trip any other way now.</div>
+                                                    <div class="txt2">George Smith</div>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <div class="sm_slider_inner">
+                                                    <div class="txt1">The hotel was exactly as described, a short walk from the old town, and the airport transfer was waiting when we landed. Simple, friendly and fairly priced.</div>
+                                                    <div class="txt2">Adam Parker</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-9 deals-grid">
+
+                    <div class="results-bar">
+                        <button type="button" class="filters-toggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="results-filters"><i class="fa-solid fa-sliders" aria-hidden="true"></i><span>Filters</span><span class="filters-toggle__count"></span></button>
+                        <label class="results-bar__sort"><span class="visually-hidden">Sort by</span><select class="results-bar__select" data-sort-select><option value="recommended">Recommended</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="stops">Fewest stops</option><option value="name">Route: A to Z</option></select></label>
+                    </div>
+
+                    <form action="javascript:;" class="form3 results-sort clearfix" data-noun="flight deal|flight deals">
+                        <div class="select1_wrapper txt">
+                            <label for="sort-by">Sort by:</label>
+                        </div>
+                        <div class="select1_wrapper sel2">
+                            <div class="select1_inner">
+                                <select class="select" id="sort-by" data-sort-select><option value="recommended">Recommended</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="stops">Fewest stops</option><option value="name">Route: A to Z</option></select>
+                            </div>
+                        </div>
+                        <p class="results-line" data-results-line aria-live="polite"></p>
+                    </form>
+
+                    <div class="results-chips" data-filter-chips hidden></div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="thumb4" data-price="250" data-f-stops="1" data-f-depart_time="morning" data-f-airline="meridian" data-stops="1" data-name="Abu Dhabi → Zurich">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/flights01.jpg" width="262" height="171" alt="" class="img-fluid">
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Abu Dhabi → Zurich</div>
+                                        <div class="txt2 txt2--facts">1 stop · Morning · Meridian Jet</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$250.00</div>
+                                                <div class="nums">avg/person</div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-flights.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb4" data-price="849" data-f-stops="2" data-f-depart_time="evening" data-f-airline="northwind" data-stops="2" data-name="Sydney → Berlin">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/flights02.jpg" width="262" height="171" alt="" class="img-fluid">
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Sydney → Berlin</div>
+                                        <div class="txt2 txt2--facts">2 stops · Evening · Northwind Airways</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$849.00</div>
+                                                <div class="nums">avg/person</div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-flights.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb4" data-price="349" data-f-stops="0" data-f-depart_time="afternoon" data-f-airline="coral" data-stops="0" data-name="Ankara → Munich">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/flights03.jpg" width="262" height="171" alt="" class="img-fluid">
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Ankara → Munich</div>
+                                        <div class="txt2 txt2--facts">Nonstop · Afternoon · Coral Air</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$349.00</div>
+                                                <div class="nums">avg/person</div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-flights.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb4" data-price="249" data-f-stops="0" data-f-depart_time="morning" data-f-airline="bluefinch" data-stops="0" data-name="Zurich → Istanbul">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/flights04.jpg" width="262" height="171" alt="" class="img-fluid">
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Zurich → Istanbul</div>
+                                        <div class="txt2 txt2--facts">Nonstop · Morning · Bluefinch Air</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$249.00</div>
+                                                <div class="nums">avg/person</div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-flights.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb4" data-price="749" data-f-stops="1" data-f-depart_time="night" data-f-airline="meridian" data-stops="1" data-name="Boston → Tbilisi">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/flights05.jpg" width="262" height="171" alt="" class="img-fluid">
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Boston → Tbilisi</div>
+                                        <div class="txt2 txt2--facts">1 stop · Night · Meridian Jet</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$749.00</div>
+                                                <div class="nums">avg/person</div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-flights.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb4" data-price="179" data-f-stops="0" data-f-depart_time="morning" data-f-airline="bluefinch" data-stops="0" data-name="Amsterdam → Vienna">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/flights06.jpg" width="262" height="171" alt="" class="img-fluid">
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Amsterdam → Vienna</div>
+                                        <div class="txt2 txt2--facts">Nonstop · Morning · Bluefinch Air</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$179.00</div>
+                                                <div class="nums">avg/person</div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-flights.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb4" data-price="69" data-f-stops="0" data-f-depart_time="evening" data-f-airline="coral" data-stops="0" data-name="Berlin → Warsaw">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/flights07.jpg" width="262" height="171" alt="" class="img-fluid">
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Berlin → Warsaw</div>
+                                        <div class="txt2 txt2--facts">Nonstop · Evening · Coral Air</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$69.00</div>
+                                                <div class="nums">avg/person</div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-flights.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb4" data-price="539" data-f-stops="0" data-f-depart_time="night" data-f-airline="northwind" data-stops="0" data-name="New York → Paris">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/flights08.jpg" width="262" height="171" alt="" class="img-fluid">
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">New York → Paris</div>
+                                        <div class="txt2 txt2--facts">Nonstop · Night · Northwind Airways</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$539.00</div>
+                                                <div class="nums">avg/person</div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-flights.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb4" data-price="49" data-f-stops="0" data-f-depart_time="afternoon" data-f-airline="bluefinch" data-stops="0" data-name="Riga → Prague">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/flights09.jpg" width="262" height="171" alt="" class="img-fluid">
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Riga → Prague</div>
+                                        <div class="txt2 txt2--facts">Nonstop · Afternoon · Bluefinch Air</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$49.00</div>
+                                                <div class="nums">avg/person</div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-flights.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="results-empty" data-results-empty hidden>
+                        <p><b>No flight deals match these filters.</b> Remove a filter or <button type="button" class="link-btn filters-clear">clear all filters</button>.</p>
+                    </div>
+
+
+                    <div class="pager_wrapper">
+                        <ul class="pager clearfix">
+                            <li class="prev"><a href="#">Previous</a></li>
+                            <li class="li"><a href="#">1</a></li>
+                            <li class="active"><a href="#">2</a></li>
+                            <li class="li"><a href="#">3</a></li>
+                            <li class="li"><a href="#">4</a></li>
+                            <li class="li"><a href="#">5</a></li>
+                            <li class="li"><a href="#">6</a></li>
+                            <li class="li"><a href="#">7</a></li>
+                            <li class="li"><a href="#">8</a></li>
+                            <li class="li"><a href="#">9</a></li>
+                            <li class="li"><a href="#">10</a></li>
+                            <li class="next"><a href="#">Next</a></li>
+                        </ul>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</main>
+
+<footer class="bot1_wrapper">
+  <div class="container">
+    <div class="ft-top">
+      <a href="index.html" class="ft-logo">
+        <img src="images/logo2.svg" width="214" height="106" alt="Travel Agency">
+      </a>
+      <p class="ft-about">Flights, hotels, car rentals and cruises, planned by travel specialists who have been there first. One booking, one team to call.</p>
+      <ul class="social2">
+        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+    <div class="ft-grid">
+      <nav class="ft-col" aria-labelledby="ft-company">
+        <h2 class="ft-title" id="ft-company">Company</h2>
+        <ul class="ft-links">
+          <li><a href="about.html">About us</a></li>
+          <li><a href="profile0027.html?member=jynda">Our team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+      <nav class="ft-col" aria-labelledby="ft-book">
+        <h2 class="ft-title" id="ft-book">Book</h2>
+        <ul class="ft-links">
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="hotels.html">Hotels</a></li>
+          <li><a href="cars.html">Rent a car</a></li>
+          <li><a href="cruises.html">Cruises</a></li>
+          <li><a href="search-deals.html">Flight deals</a></li>
+          <li><a href="manage-booking.html">Manage a booking</a></li>
+        </ul>
+      </nav>
+      <nav class="ft-col" aria-labelledby="ft-support">
+        <h2 class="ft-title" id="ft-support">Support</h2>
+        <ul class="ft-links">
+          <li><a href="help.html">Help center</a></li>
+          <li><a href="trips.html">My trips</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms &amp; conditions</a></li>
+        </ul>
+      </nav>
+      <div class="ft-col ft-news">
+        <h2 class="ft-title" id="ft-newsletter">Newsletter</h2>
+        <p>Fare drops, new routes and travel ideas, twice a month.</p>
+        <form class="ft-form" action="#" data-newsletter novalidate>
+          <label class="visually-hidden" for="ft-email">Email address</label>
+          <div class="ft-field">
+            <input type="email" id="ft-email" name="email" placeholder="Your email address" autocomplete="email" required>
+            <button type="submit">Subscribe</button>
+          </div>
+          <p class="ft-note" data-newsletter-note role="status"></p>
+        </form>
+        <ul class="ft-contact">
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+19175550100">+1 917 555 0100</a></li>
+          <li><i class="fa-regular fa-envelope" aria-hidden="true"></i><a href="mailto:support@example.com">support@example.com</a></li>
+          <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>250 Travel Avenue, Suite 6, New York, NY 10001</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<div class="bot2_wrapper">
+  <div class="container ft-bottom">
+    <span class="copy">© 2026 Sanjida Priya. All rights reserved.</span>
+    <ul class="ft-legal">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="help.html">Help center</a></li>
+      <li class="ft-credit">Designed by <strong>Sanjida Priya</strong></li>
+    </ul>
+  </div>
+</div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<script src="../../../../../cdn.jsdelivr.net/npm/bootstrap%405.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="../../../../../cdn.jsdelivr.net/npm/swiper%4014.3.0/swiper-bundle.min.js" integrity="sha384-nimz5qRuF8SOYqiuzkhgKleYiz6jIj9pUhB/LlAAsbB6I3fI9v9s5RMwMTzEyOAY" crossorigin="anonymous"></script>
+<script src="js/search.js"></script>
+<script src="js/results.js"></script>
+<script src="js/script.js"></script>
+<script src="js/googlemap.js"></script>
+</body>
+
+</html>

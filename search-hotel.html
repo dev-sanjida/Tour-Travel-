@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+    <title>Search hotels | Travel Agency</title>
+<meta name="description" content="Hotel results with filters for stars, price, amenities and guest rating.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="../../../../../cdn.jsdelivr.net/npm/bootstrap%405.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link href="../../../../../cdn.jsdelivr.net/npm/%40fortawesome/fontawesome-free%407.3.1/css/all.min.css" rel="stylesheet" integrity="sha384-qrALq7+6jBOZIQsNnT6xGkMDru64qD6uTlDra39xrt2SoXl4pO3FX6Roz/RpR/BS" crossorigin="anonymous">
+<link href="../../../../../cdn.jsdelivr.net/npm/animate.css%404.1.1/animate.min.css" rel="stylesheet" integrity="sha384-Gu3KVV2H9d+yA4QDpVB7VcOyhJlAVrcXd0thEjr4KznfaFPLe0xQJyonVxONa4ZC" crossorigin="anonymous">
+<link href="../../../../../cdn.jsdelivr.net/npm/swiper%4014.3.0/swiper-bundle.min.css" rel="stylesheet" integrity="sha384-xkKzAc7JSlGq3SLCZHugx/i0gfYZf6kaFzg3v9/wz0HtsAFYPLz7aUvCFTac8KBk" crossorigin="anonymous">
+<link rel="preload" href="fonts/raleway-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link href="css/style.css" rel="stylesheet">
+<link href="css/results.css" rel="stylesheet">
+</head>
+<body class="not-front page-post">
+
+<div id="main">
+<a class="skip-link" href="#page-content">Skip to main content</a>
+
+    <div class="top1_wrapper" role="region" aria-label="Contact details and language">
+        <div class="container">
+            <div class="top1 clearfix">
+                <div class="email1"><i class="fa-regular fa-envelope" aria-hidden="true"></i><a href="mailto:support@example.com">support@example.com</a></div>
+                <div class="phone1"><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+19175550100">+1 917 555 0100</a></div>
+                <div class="social_wrapper">
+                    <ul class="social clearfix">
+                        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Vimeo"><i class="fa-brands fa-square-vimeo" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="lang1">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false"><img class="flag" src="images/flags/gb.svg" width="20" height="12" alt="">English
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a class="dropdown-item" href="#" lang="de"><img class="flag" src="images/flags/de.svg" width="20" height="12" alt="">Deutsch</a></li>
+                            <li><a class="dropdown-item" href="#" lang="ru"><img class="flag" src="images/flags/ru.svg" width="20" height="12" alt="">Русский</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="top2_wrapper">
+        <div class="container">
+            <div class="top2 clearfix">
+                <header>
+                    <div class="logo_wrapper">
+                        <a href="index.html" class="logo">
+                            <img src="images/logo.svg" width="190" height="94" alt="Travel Agency" class="img-fluid">
+                        </a>
+                    </div>
+                </header>
+                <nav class="navbar navbar_ navbar-default" aria-label="Main menu">
+                    <button type="button" class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                        <span class="visually-hidden">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-collapse navbar-collapse_ collapse">
+                        <ul class="nav navbar-nav sf-menu clearfix">
+                            <li class="sub-menu sub-menu-1"><a href="#">Home<em></em></a>
+                                <ul>
+                                    <li><a href="index.html">Home Version 1</a></li>
+                                    <li><a href="index-2.html">Home Version 2 (slideshow)</a></li>
+                                    <li><a href="index-1.html">Home Version 3 (video)</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li class="sub-menu sub-menu-1 has-mega active"><a href="#">Pages<em></em></a>
+                                <ul class="mega">
+                                  <li class="mega__col">
+                                    <span class="mega__title">Search and results</span>
+                                    <ul>
+                                      <li><a href="flights.html">Flights</a></li>
+                                      <li><a href="search-deals.html">Flight deals</a></li>
+                                      <li><a href="search-flights.html">Search flights</a></li>
+                                      <li><a href="hotels.html">Hotels</a></li>
+                                      <li><a href="search-hotel.html">Search hotels</a></li>
+                                      <li><a href="cars.html">Rent a car</a></li>
+                                      <li><a href="search-cars.html">Search cars</a></li>
+                                      <li><a href="cruises.html">Cruises</a></li>
+                                      <li><a href="search-cruise.html">Search cruises</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="mega__col">
+                                    <span class="mega__title">Booking</span>
+                                    <ul>
+                                      <li><a href="booking-flights.html">Flight details</a></li>
+                                      <li><a href="booking-hotel.html">Hotel details</a></li>
+                                      <li><a href="booking-cars.html">Car details</a></li>
+                                      <li><a href="booking-cruise.html">Cruise details</a></li>
+                                      <li><a href="review.html">Review your trip</a></li>
+                                      <li><a href="booking-hotel-page.html">Checkout</a></li>
+                                      <li><a href="booking-success.html">Booking confirmed</a></li>
+                                      <li><a href="manage-booking.html">Manage a booking</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="mega__col">
+                                    <span class="mega__title">Account</span>
+                                    <ul>
+                                      <li><a href="sign-in.html">Sign in</a></li>
+                                      <li><a href="account.html">Account and profile</a></li>
+                                      <li><a href="trips.html">My trips</a></li>
+                                      <li><a href="trip.html">Trip details</a></li>
+                                      <li><a href="inbox.html">Inbox</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="mega__col">
+                                    <span class="mega__title">Explore and more</span>
+                                    <ul>
+                                      <li><a href="destinations.html">Destinations</a></li>
+                                      <li><a href="destination.html">Destination guide</a></li>
+                                      <li><a href="help.html">Help center</a></li>
+                                      <li><a href="profile0027.html?member=jynda">Our team</a></li>
+                                      <li><a href="privacy.html">Privacy policy</a></li>
+                                      <li><a href="terms.html">Terms &amp; conditions</a></li>
+                                      <li><a href="404.html">Page not found</a></li>
+                                      <li><a href="components.html">Components</a></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                            </li>
+
+                            <li class="sub-menu sub-menu-1"><a href="#">Blog<em></em></a>
+                                <ul>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="post.html">Blog Post</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+<main id="page-content" tabindex="-1">
+
+
+    <div id="google_map2_wrapper"><div id="google_map2" class="google-map" data-lat="50.077474" data-lng="14.422654" data-zoom="9" data-style="teal" data-marker="images/rmarker.png"></div></div>
+
+    <div class="breadcrumbs1_wrapper">
+        <div class="container">
+            <div class="breadcrumbs1"><a href="index.html">Home</a><span>/</span>Pages<span>/</span>Hotels</div>
+        </div>
+    </div>
+
+
+    <div class="results-search">
+        <div class="container">
+            <h1 class="visually-hidden">Hotel results</h1>
+            <form action="https://template-preview.com/templates/travel-agency/preview/v1/search-hotel.html" method="get" class="form1 form1--search" novalidate data-search data-prefill>
+              <div class="search__opts">
+                <div class="opt" data-menu>
+                  <input type="hidden" name="type" value="any">
+                  <button class="opt__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="rs-ht-type-list"><i class="fa-solid fa-hotel" aria-hidden="true"></i><span class="opt__label">Any property</span><i class="fa-solid fa-chevron-down opt__chev" aria-hidden="true"></i></button>
+                  <ul class="sf-pop opt__list" id="rs-ht-type-list" role="listbox" aria-label="Property type" hidden>
+                    <li role="option" tabindex="-1" data-value="any" aria-selected="true">Any property</li>
+                    <li role="option" tabindex="-1" data-value="hotel" aria-selected="false">Hotels</li>
+                    <li role="option" tabindex="-1" data-value="apartment" aria-selected="false">Apartments</li>
+                    <li role="option" tabindex="-1" data-value="resort" aria-selected="false">Resorts</li>
+                    <li role="option" tabindex="-1" data-value="guesthouse" aria-selected="false">Guest houses</li>
+                  </ul>
+                </div>
+                <div class="opt" data-menu>
+                  <input type="hidden" name="stars" value="any">
+                  <button class="opt__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="rs-ht-stars-list"><i class="fa-solid fa-star" aria-hidden="true"></i><span class="opt__label">Any rating</span><i class="fa-solid fa-chevron-down opt__chev" aria-hidden="true"></i></button>
+                  <ul class="sf-pop opt__list" id="rs-ht-stars-list" role="listbox" aria-label="Star rating" hidden>
+                    <li role="option" tabindex="-1" data-value="any" aria-selected="true">Any rating</li>
+                    <li role="option" tabindex="-1" data-value="3" aria-selected="false">3 stars and up</li>
+                    <li role="option" tabindex="-1" data-value="4" aria-selected="false">4 stars and up</li>
+                    <li role="option" tabindex="-1" data-value="5" aria-selected="false">5 stars</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sbar">
+                <div class="sf sf--loc sf--wide" data-location data-kinds="city,landmark" data-required="Choose where you’re going.">
+                  <label class="sf__label" for="rs-ht-where">City or landmark:</label>
+                  <div class="sf__box">
+                    <i class="fa-solid fa-location-dot sf__icon" aria-hidden="true"></i>
+                    <input type="text" id="rs-ht-where" placeholder="Where are you going?" value="Prague" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="rs-ht-where-list">
+                    <input type="hidden" name="where" value="Prague">
+                    <button class="sf__clear" type="button" aria-label="Clear destination"><i class="fa-solid fa-circle-xmark" aria-hidden="true"></i></button>
+                  </div>
+                  <ul class="sf-pop sf-list" id="rs-ht-where-list" role="listbox" aria-label="Suggestions" hidden></ul>
+                </div>
+                <div class="sf sf--dates" data-dates data-flexible data-min-nights="1" data-offset="14" data-length="2" data-labels="Check-in,Check-out" data-title="Stay dates">
+                  <span class="sf__label" aria-hidden="true">Check-in – Check-out:</span>
+                  <div class="sf__box">
+                    <i class="fa-regular fa-calendar sf__icon" aria-hidden="true"></i>
+                    <button class="sf__btn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="rs-ht-dates-pop"><span class="visually-hidden">Stay dates: </span><span class="sf__value"></span></button>
+                  </div>
+                  <input type="hidden" name="checkin" data-start><input type="hidden" name="checkout" data-end><input type="hidden" name="flexible" data-flex>
+                  <div class="sf-pop sf-cal" id="rs-ht-dates-pop" role="dialog" aria-label="Choose stay dates" hidden></div>
+                </div>
+                <div class="sf sf--trav" data-travelers data-rooms data-title="Guests and rooms">
+                  <span class="sf__label" aria-hidden="true">Guests &amp; rooms:</span>
+                  <div class="sf__box">
+                    <i class="fa-regular fa-user sf__icon" aria-hidden="true"></i>
+                    <button class="sf__btn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="rs-ht-trav-pop"><span class="visually-hidden">Guests and rooms: </span><span class="sf__value"></span></button>
+                  </div>
+                  <div class="sf-pop sf-trav" id="rs-ht-trav-pop" role="dialog" aria-label="Guests and rooms" hidden></div>
+                </div>
+                <button type="submit" class="btn-default btn-form1-submit sbar__go"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>Search</button>
+              </div>
+              <p class="search__error" role="alert"></p>
+              <div class="search__extra">
+                <label class="chk"><input type="checkbox" name="flight" value="1">Add a flight</label>
+                <label class="chk"><input type="checkbox" name="car" value="1">Add a car</label>
+              </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-3 results-side">
+                    <div class="filters-panel" id="results-filters">
+                        <div class="filters-sheet__head"><span id="filters-sheet-title">Filters</span><button type="button" class="filters-sheet__close" aria-label="Close filters"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div>
+                        <div class="filters-head">
+                            <h2 class="filters-title">Filter results</h2>
+                            <button type="button" class="link-btn filters-clear">Clear all</button>
+                        </div>
+                        <ul class="ul3 filters">
+                        <li><details class="filter" open><summary>Star rating</summary><div class="filter__body"><ul class="filter-list"><li><label class="fchk"><input type="checkbox" name="stars" value="5"><span class="fstars" role="img" aria-label="5 stars"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></span><span class="fchk__note">5</span></label></li><li><label class="fchk"><input type="checkbox" name="stars" value="4.5"><span class="fstars" role="img" aria-label="4.5 stars"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i></span><span class="fchk__note">4.5</span></label></li><li><label class="fchk"><input type="checkbox" name="stars" value="4"><span class="fstars" role="img" aria-label="4 stars"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-regular fa-star" aria-hidden="true"></i></span><span class="fchk__note">4</span></label></li><li><label class="fchk"><input type="checkbox" name="stars" value="3.5"><span class="fstars" role="img" aria-label="3.5 stars"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i><i class="fa-regular fa-star" aria-hidden="true"></i></span><span class="fchk__note">3.5</span></label></li><li><label class="fchk"><input type="checkbox" name="stars" value="3"><span class="fstars" role="img" aria-label="3 stars"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-regular fa-star" aria-hidden="true"></i><i class="fa-regular fa-star" aria-hidden="true"></i></span><span class="fchk__note">3</span></label></li></ul></div></details></li>
+                        <li><details class="filter"><summary>Price per night</summary><div class="filter__body"><div class="filter-price"><label><span>Min</span><input type="number" name="price_min" min="0" step="50" placeholder="$0" inputmode="numeric"></label><span class="filter-price__dash" aria-hidden="true">–</span><label><span>Max</span><input type="number" name="price_max" min="0" step="50" placeholder="$1,000" inputmode="numeric"></label></div></div></details></li>
+                        <li><details class="filter"><summary>Amenities</summary><div class="filter__body"><ul class="filter-list" data-match="all"><li><label class="fchk"><input type="checkbox" name="amenity" value="wifi"><span>Free Wi-Fi</span></label></li><li><label class="fchk"><input type="checkbox" name="amenity" value="breakfast"><span>Breakfast included</span></label></li><li><label class="fchk"><input type="checkbox" name="amenity" value="pool"><span>Pool</span></label></li><li><label class="fchk"><input type="checkbox" name="amenity" value="parking"><span>Parking</span></label></li><li><label class="fchk"><input type="checkbox" name="amenity" value="shuttle"><span>Airport shuttle</span></label></li></ul></div></details></li>
+                        <li><details class="filter"><summary>Guest rating</summary><div class="filter__body"><ul class="filter-list" data-match="min"><li><label class="fchk"><input type="checkbox" name="rating" value="9"><span>Superb <small>9+</small></span></label></li><li><label class="fchk"><input type="checkbox" name="rating" value="8"><span>Very good <small>8+</small></span></label></li><li><label class="fchk"><input type="checkbox" name="rating" value="7"><span>Good <small>7+</small></span></label></li><li><label class="fchk"><input type="checkbox" name="rating" value="6"><span>Pleasant <small>6+</small></span></label></li></ul></div></details></li>
+                        </ul>
+                        <div class="filters-sheet__foot"><button type="button" class="link-btn filters-clear filters-clear--sheet">Clear all</button><button type="button" class="filters-sheet__show">Show <span data-results-count></span> results</button></div>
+                    </div>
+
+                    <div class="sm_slider sm_slider1">
+                        <button type="button" class="sm_slider_prev" aria-label="Previous"></button>
+                        <button type="button" class="sm_slider_next" aria-label="Next"></button>
+                        <div class="">
+                            <div class="carousel-box">
+                                <div class="inner">
+                                    <div class="carousel main swiper">
+<ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <div class="sm_slider_inner">
+                                                    <div class="txt1">Our agent rebooked us within an hour when our connecting flight was canceled, and we still made the first night of the cruise. I would not book a trip any other way now.</div>
+                                                    <div class="txt2">George Smith</div>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <div class="sm_slider_inner">
+                                                    <div class="txt1">The hotel was exactly as described, a short walk from the old town, and the airport transfer was waiting when we landed. Simple, friendly and fairly priced.</div>
+                                                    <div class="txt2">Adam Parker</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-9">
+
+                    <div class="results-bar">
+                        <button type="button" class="filters-toggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="results-filters"><i class="fa-solid fa-sliders" aria-hidden="true"></i><span>Filters</span><span class="filters-toggle__count"></span></button>
+                        <label class="results-bar__sort"><span class="visually-hidden">Sort by</span><select class="results-bar__select" data-sort-select><option value="recommended">Recommended</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="rating">Guest rating</option><option value="stars">Stars</option><option value="name">Name: A to Z</option></select></label>
+                    </div>
+
+                    <form action="javascript:;" class="form3 results-sort clearfix" data-noun="hotel|hotels" data-where="[name=&quot;where&quot;]">
+                        <div class="select1_wrapper txt">
+                            <label for="sort-by">Sort by:</label>
+                        </div>
+                        <div class="select1_wrapper sel2">
+                            <div class="select1_inner">
+                                <select class="select" id="sort-by" data-sort-select><option value="recommended">Recommended</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="rating">Guest rating</option><option value="stars">Stars</option><option value="name">Name: A to Z</option></select>
+                            </div>
+                        </div>
+                        <p class="results-line" data-results-line aria-live="polite"></p>
+                    </form>
+
+                    <div class="results-chips" data-filter-chips hidden></div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="thumb5" data-price="250" data-f-stars="4" data-f-rating="8.6" data-f-amenity="wifi breakfast parking" data-rating="8.6" data-name="Normandy Hotel">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/hotels01.jpg" width="270" height="179" alt="" class="img-fluid">
+                                        <div class="over">
+                                            <div class="v1">Normandy Hotel <span>8.6 Review score</span></div>
+                                            <div class="v2">Twin / Double Room</div>
+                                        </div>
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Normandy Hotel</div>
+                                        <div class="txt2">Twin / Double Room</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$250.00</div>
+                                                <div class="stars2" role="img" aria-label="4 stars">
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-hotel.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb5" data-price="349" data-f-stars="4.5" data-f-rating="8.9" data-f-amenity="wifi breakfast pool" data-rating="8.9" data-name="Hotel West-End">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/hotels02.jpg" width="270" height="179" alt="" class="img-fluid">
+                                        <div class="over">
+                                            <div class="v1">Hotel West-End <span>8.9 Review score</span></div>
+                                            <div class="v2">Twin / Double Room</div>
+                                        </div>
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Hotel West-End</div>
+                                        <div class="txt2">Twin / Double Room</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$349.00</div>
+                                                <div class="stars2" role="img" aria-label="4.5 stars">
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-hotel.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb5" data-price="360" data-f-stars="5" data-f-rating="9.3" data-f-amenity="wifi breakfast pool shuttle" data-rating="9.3" data-name="Chambiges Elysees">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/hotels03.jpg" width="270" height="179" alt="" class="img-fluid">
+                                        <div class="over">
+                                            <div class="v1">Chambiges Elysees <span>9.3 Review score</span></div>
+                                            <div class="v2">Twin / Double Room</div>
+                                        </div>
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Chambiges Elysees</div>
+                                        <div class="txt2">Twin / Double Room</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$360.00</div>
+                                                <div class="stars2" role="img" aria-label="5 stars">
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-hotel.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb5" data-price="75" data-f-stars="3" data-f-rating="7.4" data-f-amenity="wifi parking" data-rating="7.4" data-name="Hamilton Hotel">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/hotels04.jpg" width="270" height="179" alt="" class="img-fluid">
+                                        <div class="over">
+                                            <div class="v1">Hamilton Hotel <span>7.4 Review score</span></div>
+                                            <div class="v2">Twin / Double Room</div>
+                                        </div>
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Hamilton Hotel</div>
+                                        <div class="txt2">Twin / Double Room</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$75.00</div>
+                                                <div class="stars2" role="img" aria-label="3 stars">
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-hotel.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb5" data-price="65" data-f-stars="3.5" data-f-rating="7.9" data-f-amenity="wifi breakfast" data-rating="7.9" data-name="Central Grand Hotel">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/hotels05.jpg" width="270" height="179" alt="" class="img-fluid">
+                                        <div class="over">
+                                            <div class="v1">Central Grand Hotel <span>7.9 Review score</span></div>
+                                            <div class="v2">Twin / Double Room</div>
+                                        </div>
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Central Grand Hotel</div>
+                                        <div class="txt2">Twin / Double Room</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$65.00</div>
+                                                <div class="stars2" role="img" aria-label="3.5 stars">
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-hotel.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb5" data-price="35" data-f-stars="3" data-f-rating="6.8" data-f-amenity="wifi" data-rating="6.8" data-name="Ambasador Premium">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/hotels06.jpg" width="270" height="179" alt="" class="img-fluid">
+                                        <div class="over">
+                                            <div class="v1">Ambasador Premium <span>6.8 Review score</span></div>
+                                            <div class="v2">Twin / Double Room</div>
+                                        </div>
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Ambasador Premium</div>
+                                        <div class="txt2">Twin / Double Room</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$35.00</div>
+                                                <div class="stars2" role="img" aria-label="3 stars">
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-hotel.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb5" data-price="450" data-f-stars="5" data-f-rating="9.1" data-f-amenity="wifi breakfast pool parking shuttle" data-rating="9.1" data-name="Grand Plaza">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/hotels07.jpg" width="270" height="179" alt="" class="img-fluid">
+                                        <div class="over">
+                                            <div class="v1">Grand Plaza <span>9.1 Review score</span></div>
+                                            <div class="v2">Twin / Double Room</div>
+                                        </div>
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Grand Plaza</div>
+                                        <div class="txt2">Twin / Double Room</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$450.00</div>
+                                                <div class="stars2" role="img" aria-label="5 stars">
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-hotel.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb5" data-price="255" data-f-stars="4" data-f-rating="8.2" data-f-amenity="wifi pool parking" data-rating="8.2" data-name="Grand Iberia">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/hotels08.jpg" width="270" height="179" alt="" class="img-fluid">
+                                        <div class="over">
+                                            <div class="v1">Grand Iberia <span>8.2 Review score</span></div>
+                                            <div class="v2">Twin / Double Room</div>
+                                        </div>
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Grand Iberia</div>
+                                        <div class="txt2">Twin / Double Room</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$255.00</div>
+                                                <div class="stars2" role="img" aria-label="4 stars">
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-hotel.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="thumb5" data-price="275" data-f-stars="4.5" data-f-rating="8.8" data-f-amenity="wifi breakfast shuttle" data-rating="8.8" data-name="Westminster Hotel">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img src="images/hotels09.jpg" width="270" height="179" alt="" class="img-fluid">
+                                        <div class="over">
+                                            <div class="v1">Westminster Hotel <span>8.8 Review score</span></div>
+                                            <div class="v2">Twin / Double Room</div>
+                                        </div>
+                                    </figure>
+                                    <div class="caption">
+                                        <div class="txt1">Westminster Hotel</div>
+                                        <div class="txt2">Twin / Double Room</div>
+                                        <div class="txt3 clearfix">
+                                            <div class="left_side">
+                                                <div class="price">$275.00</div>
+                                                <div class="stars2" role="img" aria-label="4.5 stars">
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="right_side"><a href="booking-hotel.html" class="btn-default btn1">Details</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="results-empty" data-results-empty hidden>
+                        <p><b>No hotels match these filters.</b> Remove a filter or <button type="button" class="link-btn filters-clear">clear all filters</button>.</p>
+                    </div>
+
+
+                    <div class="pager_wrapper">
+                        <ul class="pager clearfix">
+                            <li class="prev"><a href="#">Previous</a></li>
+                            <li class="li"><a href="#">1</a></li>
+                            <li class="active"><a href="#">2</a></li>
+                            <li class="li"><a href="#">3</a></li>
+                            <li class="li"><a href="#">4</a></li>
+                            <li class="li"><a href="#">5</a></li>
+                            <li class="li"><a href="#">6</a></li>
+                            <li class="li"><a href="#">7</a></li>
+                            <li class="li"><a href="#">8</a></li>
+                            <li class="li"><a href="#">9</a></li>
+                            <li class="li"><a href="#">10</a></li>
+                            <li class="next"><a href="#">Next</a></li>
+                        </ul>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</main>
+
+<footer class="bot1_wrapper">
+  <div class="container">
+    <div class="ft-top">
+      <a href="index.html" class="ft-logo">
+        <img src="images/logo2.svg" width="214" height="106" alt="Travel Agency">
+      </a>
+      <p class="ft-about">Flights, hotels, car rentals and cruises, planned by travel specialists who have been there first. One booking, one team to call.</p>
+      <ul class="social2">
+        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+    <div class="ft-grid">
+      <nav class="ft-col" aria-labelledby="ft-company">
+        <h2 class="ft-title" id="ft-company">Company</h2>
+        <ul class="ft-links">
+          <li><a href="about.html">About us</a></li>
+          <li><a href="profile0027.html?member=jynda">Our team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+      <nav class="ft-col" aria-labelledby="ft-book">
+        <h2 class="ft-title" id="ft-book">Book</h2>
+        <ul class="ft-links">
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="hotels.html">Hotels</a></li>
+          <li><a href="cars.html">Rent a car</a></li>
+          <li><a href="cruises.html">Cruises</a></li>
+          <li><a href="search-deals.html">Flight deals</a></li>
+          <li><a href="manage-booking.html">Manage a booking</a></li>
+        </ul>
+      </nav>
+      <nav class="ft-col" aria-labelledby="ft-support">
+        <h2 class="ft-title" id="ft-support">Support</h2>
+        <ul class="ft-links">
+          <li><a href="help.html">Help center</a></li>
+          <li><a href="trips.html">My trips</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms &amp; conditions</a></li>
+        </ul>
+      </nav>
+      <div class="ft-col ft-news">
+        <h2 class="ft-title" id="ft-newsletter">Newsletter</h2>
+        <p>Fare drops, new routes and travel ideas, twice a month.</p>
+        <form class="ft-form" action="#" data-newsletter novalidate>
+          <label class="visually-hidden" for="ft-email">Email address</label>
+          <div class="ft-field">
+            <input type="email" id="ft-email" name="email" placeholder="Your email address" autocomplete="email" required>
+            <button type="submit">Subscribe</button>
+          </div>
+          <p class="ft-note" data-newsletter-note role="status"></p>
+        </form>
+        <ul class="ft-contact">
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+19175550100">+1 917 555 0100</a></li>
+          <li><i class="fa-regular fa-envelope" aria-hidden="true"></i><a href="mailto:support@example.com">support@example.com</a></li>
+          <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>250 Travel Avenue, Suite 6, New York, NY 10001</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<div class="bot2_wrapper">
+  <div class="container ft-bottom">
+    <span class="copy">© 2026 Sanjida Priya. All rights reserved.</span>
+    <ul class="ft-legal">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="help.html">Help center</a></li>
+      <li class="ft-credit">Designed by <strong>Sanjida Priya</strong></li>
+    </ul>
+  </div>
+</div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<script src="../../../../../cdn.jsdelivr.net/npm/bootstrap%405.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="../../../../../cdn.jsdelivr.net/npm/swiper%4014.3.0/swiper-bundle.min.js" integrity="sha384-nimz5qRuF8SOYqiuzkhgKleYiz6jIj9pUhB/LlAAsbB6I3fI9v9s5RMwMTzEyOAY" crossorigin="anonymous"></script>
+<script src="js/search.js"></script>
+<script src="js/results.js"></script>
+<script src="js/script.js"></script>
+<script src="js/googlemap.js"></script>
+</body>
+
+</html>

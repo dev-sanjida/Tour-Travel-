@@ -1,0 +1,329 @@
+/*----------------------------------------------------*/
+/* Travel Agency - results pages (search-*.html)
+/* The search bar across the top (same box as the home page, see
+/* "booking search box" in style.css) and the filter column on the left.
+/* Loaded after css/style.css.
+/*----------------------------------------------------*/
+
+/* Search bar above the results */
+.results-search{padding: 10px 0 0;}
+.results-search .form1--search{margin: 0; background: #fff; border: 1px solid #ebebeb; border-bottom: 3px solid #1cbbb4; border-radius: 4px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);}
+.results-search .form1--search .search__opts{margin-top: -6px;}
+
+/* Phones: the search folds into a one-card summary (js/results.js) */
+.search-summary{display: none;}
+@media (max-width: 991px) {
+  .search-summary{display: flex; align-items: center; gap: 12px; width: 100%; min-height: 64px; margin: 0 0 12px; padding: 12px 14px 12px 16px; border: 1px solid #e3e3e3; border-bottom: 3px solid #1cbbb4; border-radius: 4px; background: #fff; font-family: inherit; text-align: left; cursor: pointer; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);}
+  .search-summary:focus{outline: none;}
+  .search-summary:focus-visible{outline: 2px solid #1cbbb4; outline-offset: 2px;}
+  .search-summary__text{display: grid; flex: 1; min-width: 0; gap: 2px;}
+  .search-summary__place{overflow: hidden; font-size: 15px; font-weight: 700; line-height: 20px; color: #464646; white-space: nowrap; text-overflow: ellipsis;}
+  .search-summary__meta{overflow: hidden; font-size: 13px; line-height: 18px; color: #636363; white-space: nowrap; text-overflow: ellipsis;}
+  .search-summary__edit{display: grid; flex: none; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #e8f8f7; color: #00857c; font-size: 14px;}
+  .search-summary__edit-label{position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;}
+  .results-search.is-collapsed .form1--search{display: none;}
+  .results-search:not(.is-collapsed) .search-summary{border-bottom-width: 1px; border-color: #1cbbb4; box-shadow: none;}
+  .results-search:not(.is-collapsed) .search-summary__edit{width: auto; padding: 0 12px; border-radius: 20px; gap: 6px; grid-auto-flow: column;}
+  .results-search:not(.is-collapsed) .search-summary__edit-label{position: static; width: auto; height: auto; clip: auto; font-size: 13px; font-weight: 700;}
+  /* Swap button: on the right edge, in the gap between the From and To boxes */
+  .results-search .form1--search .sbar__swap{position: absolute; top: 70px; right: 10px; width: 32px; height: 32px; margin: 0; transform: rotate(90deg);}
+  .results-search .form1--search .sbar__swap:hover{transform: rotate(270deg);}
+}
+
+/* Filter column */
+.filters-head{display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 0 0 12px; padding-bottom: 12px; border-bottom: 1px solid #ebebeb;}
+.results-side .filters-title{margin: 0; padding: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 22px; color: #464646; text-align: left; text-transform: none; letter-spacing: 0;}
+.results-side .filters-title::before, .results-side .filters-title::after{display: none;}
+.results-search h1::after{display: none;}
+.filters-clear{font-size: 13px;}
+.filters-clear:disabled{color: #959595; text-decoration: none; cursor: default;}
+.results-side .ul3.filters{margin-bottom: 24px;}
+.filter-list small{margin-left: 4px; font-size: 12px; font-weight: 500; color: #959595;}
+.fchk{line-height: 20px;}
+.fchk .fstars{display: inline-flex; gap: 1px;}
+.fchk .fstars i{margin-right: 0;}
+.fchk__note{min-width: 22px; font-size: 13px; color: #959595;}
+
+/* Flights: dates, travelers, trip type and cabin at the top of the sidebar */
+.trip-card{position: relative; display: grid; gap: 14px; margin: 0 0 24px; padding: 16px 20px 20px; background: #f6f6f6; border-bottom: 3px solid #1cbbb4; border-radius: 4px;}
+.results-side .trip-card__title{margin: 0; padding: 0; border: 0; font-size: 16px; font-weight: 700; line-height: 22px; color: #464646; text-align: left; text-transform: none; letter-spacing: 0;}
+.results-side .trip-card__title::after{display: none;}
+.trip-card__opts{display: flex; flex-wrap: wrap; gap: 2px 18px; margin-top: -6px;}
+.trip-card__opts .opt__btn > i:first-child{color: #1cbbb4; font-size: 13px;}
+.trip-card .sf{flex: none;}
+.trip-card .sf__label{display: block; margin: 0; padding-bottom: 8px; font-size: 13px; font-weight: 600; line-height: 1; color: #636363;}
+.trip-card .search__error{margin: -4px 0 0; color: #e8202a; font-size: 13px; font-weight: 600;}
+.trip-card .search__error:empty{display: none;}
+.trip-card__go:focus{height: 40px; border: 1px solid #1cbbb4; border-radius: 4px; background: #fff; color: #00857c; font-family: inherit; font-weight: 700;}
+/* Popovers open to the right, over the results, instead of centred on a narrow field */
+.trip-card .sf-cal{left: 0; transform: none;}
+.trip-card .sf-trav{left: 0; right: auto;}
+
+/* Phones: a "Filters" button and a compact sort menu above the results;
+/* the filters open as a sheet that slides up over the page. */
+.results-bar, .filters-sheet__head, .filters-sheet__foot{display: none;}
+.filters-toggle{display: inline-flex; align-items: center; gap: 10px; height: 44px; padding: 0 16px; border: 1px solid #e3e3e3; border-radius: 4px; background: #fff; font-family: inherit; font-size: 14px; font-weight: 700; color: #464646; cursor: pointer;}
+.filters-toggle > i:first-child{color: #1cbbb4;}
+.filters-toggle:hover{border-color: #1cbbb4; color: #00857c;}
+.filters-toggle:focus{outline: none;}
+.filters-toggle:focus-visible{outline: 2px solid #1cbbb4; outline-offset: 2px;}
+.filters-toggle__count{display: inline-grid; place-items: center; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: #1cbbb4; color: #fff; font-size: 12px; line-height: 1;}
+.filters-toggle__count:empty{display: none;}
+.results-bar__sort{flex: 0 1 190px; min-width: 0; margin: 0;}
+.results-bar__select{width: 100%; height: 44px; padding: 0 34px 0 12px; border: 1px solid #e3e3e3; border-radius: 4px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23959595' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center; -webkit-appearance: none; appearance: none; font-family: inherit; font-size: 14px; font-weight: 600; color: #464646; text-overflow: ellipsis;}
+.results-bar__select:focus{outline: none; border-color: #1cbbb4;}
+.results-bar__select:focus-visible{outline: 2px solid #1cbbb4; outline-offset: 2px;}
+
+@media (max-width: 767px) {
+  .results-search{padding-top: 0;}
+  .results-search .form1--search{padding: 20px 15px;}
+}
+/* Phones and tablets (below 992px): the sidebar becomes the Filters sheet,
+/* the results take the full width. */
+@media (max-width: 991px) {
+  .results-side .sm_slider{display: none;}
+  .results-bar{display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 20px;}
+  .results-side ~ .col-sm-9 .form3{display: none;}
+
+  /* The sheet */
+  .filters-panel{position: fixed; z-index: 2000; inset: 0; display: flex; flex-direction: column; background: #fff; transform: translateY(100%); visibility: hidden; transition: transform .3s ease, visibility 0s linear .3s;}
+  .filters-panel.is-open{transform: none; visibility: visible; transition: transform .3s ease;}
+  .filters-panel .filters-head{display: none;}
+  .filters-sheet__head{flex: none; display: flex; align-items: center; justify-content: space-between; padding: calc(10px + env(safe-area-inset-top, 0px)) 16px 10px; border-bottom: 1px solid #ebebeb; font-size: 17px; font-weight: 700; color: #464646;}
+  .filters-sheet__close{display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 0; border-radius: 50%; background: #e8f8f7; color: #00857c; font-size: 16px; cursor: pointer;}
+  .filters-sheet__close:focus{outline: none;}
+  .filters-sheet__close:focus-visible{outline: 2px solid #1cbbb4; outline-offset: 2px;}
+  .results-side .ul3.filters{flex: 1; min-height: 0; overflow-y: auto; margin: 0; padding: 16px; -webkit-overflow-scrolling: touch;}
+  .filters-sheet__foot{flex: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid #ebebeb; background: #fff;}
+  .filters-sheet__foot .filters-clear{font-size: 14px;}
+  .filters-sheet__show{flex: 0 1 220px; height: 44px; border: 0; border-radius: 4px; background: #1cbbb4; color: #fff; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer;}
+  .filters-sheet__show:hover{background: #00a99d;}
+  .filters-sheet__show:focus{outline: none;}
+  .filters-sheet__show:focus-visible{outline: 2px solid #00857c; outline-offset: 2px;}
+  body.filters-open{overflow: hidden;}
+}
+@media (max-width: 991px) and (prefers-reduced-motion: reduce) {
+  .filters-panel, .filters-panel.is-open{transition: none;}
+}
+
+/* Card grids: a thin divider centred in the gap between rows. Sidebar blocks
+/* stack with one 24px gap. On flight deals the wider row gap puts the second
+/* card row roughly level with the second filter card on a freshly opened page. */
+.results-side ~ .col-sm-9 > .hl1{height: 1px; margin: 15px 0 14px; background: #ebebeb;}
+@media (min-width: 1200px) {
+  .results-side ~ .deals-grid > .hl1{margin: 44px 0 45px;}
+}
+
+/* Flight deals: page heading sits right under the breadcrumb */
+.results-title{margin-top: 0; padding-top: 4px;}
+
+/*----------------------------------------------------*/
+/* Flight results (search-flights.html)
+/*----------------------------------------------------*/
+.fr-head{margin: 0 0 14px;}
+.fr-head .fr-summary{display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 0; margin: 0; padding: 0; font-size: 15px; font-weight: 500; line-height: 22px; color: #636363; text-align: left; text-transform: none; letter-spacing: 0;}
+.fr-head .fr-summary::after{display: none;}
+.fr-summary > b{font-size: 18px; font-weight: 700; color: #464646;}
+.fr-summary > * + *::before{content: "·"; margin: 0 10px; color: #959595;}
+.fr-summary > :empty{display: none;}
+
+/* Sort: four tabs with the best value under each */
+.fr-sort{display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 0 20px; background: #fafafa; border: 1px solid #ebebeb; border-radius: 4px; overflow: hidden;}
+.fr-sort__btn{display: grid; gap: 2px; padding: 12px 16px 10px; border: 0; border-bottom: 3px solid transparent; background: none; font-family: inherit; text-align: left; color: #464646; cursor: pointer; transition: background-color .2s, border-color .2s;}
+.fr-sort__btn + .fr-sort__btn{border-left: 1px solid #ebebeb;}
+.fr-sort__btn b{font-size: 14px; font-weight: 700; line-height: 20px;}
+.fr-sort__btn small{font-size: 13px; font-weight: 500; line-height: 18px; color: #959595;}
+.fr-sort__btn:hover{background: #fff;}
+.fr-sort__btn[aria-pressed="true"]{background: #fff; border-bottom-color: #1cbbb4;}
+.fr-sort__btn[aria-pressed="true"] b{color: #00857c;}
+.fr-sort__btn:focus{outline: none;}
+.fr-sort__btn:focus-visible{outline: 2px solid #076f68; outline-offset: -2px;}
+
+/* Result cards */
+.fr-list{display: grid; gap: 16px; margin-bottom: 30px;}
+.fr-list[hidden]{display: none;}
+.fr-card{display: grid; grid-template-columns: minmax(0, 1fr) 190px; background: #fff; border: 1px solid #e3e3e3; border-radius: 4px; transition: border-color .2s, box-shadow .2s;}
+.fr-card[hidden]{display: none;}
+.fr-card:hover{border-color: #1cbbb4; box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);}
+.fr-card__main{display: grid; gap: 14px; padding: 18px 22px;}
+.fr-airline{display: flex; align-items: center; gap: 10px;}
+.fr-airline__mark{display: grid; place-items: center; flex: none; width: 34px; height: 34px; border-radius: 4px; background: #1cbbb4; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: .04em;}
+.fr-card .fr-airline__name{margin: 0; padding: 0; font-size: 15px; font-weight: 700; line-height: 20px; color: #464646; text-align: left; text-transform: none;}
+.fr-card .fr-airline__name::after{display: none;}
+
+.fr-leg{display: grid; grid-template-columns: 96px auto minmax(90px, 1fr) auto; align-items: center; gap: 0 16px;}
+.fr-leg[hidden]{display: none;}
+.fr-leg + .fr-leg{padding-top: 14px; border-top: 1px dashed #e3e3e3;}
+.fr-leg__label{display: grid; font-size: 12px; line-height: 16px; color: #959595;}
+.fr-leg__label b{font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #636363;}
+.fr-leg__end{display: grid; min-width: 54px;}
+.fr-leg__end--arr{text-align: right;}
+.fr-time{position: relative; font-size: 20px; font-weight: 700; line-height: 24px; color: #464646;}
+.fr-next{position: absolute; top: -2px; margin-left: 2px; font-size: 11px; font-weight: 700; color: #e8202a;}
+.fr-code{font-size: 13px; font-weight: 600; line-height: 18px; color: #959595;}
+.fr-path{display: grid; justify-items: center; gap: 4px; font-size: 12px; line-height: 16px; color: #959595; text-align: center;}
+.fr-path__line{position: relative; display: block; width: 100%; height: 2px; background: #e3e3e3;}
+.fr-path__line::before, .fr-path__line::after{content: ""; position: absolute; top: -3px; width: 8px; height: 8px; border: 2px solid #1cbbb4; border-radius: 50%; background: #fff;}
+.fr-path__line::before{left: 0;}
+.fr-path__line::after{right: 0;}
+.fr-path__stops{font-weight: 600; color: #636363;}
+.fr-path--direct .fr-path__stops{color: #00857c;}
+
+.fr-bags{display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0; padding: 0; list-style: none; font-size: 12px; line-height: 18px; color: #636363;}
+.fr-bags li{display: inline-flex; align-items: center; gap: 6px;}
+.fr-bags i{color: #1cbbb4; font-size: 13px;}
+.fr-bags .is-out{color: #959595; text-decoration: line-through;}
+.fr-bags .is-out i{color: #e3e3e3;}
+
+.fr-card__side{display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 18px 22px; background: #fafafa; border-left: 1px dashed #e3e3e3; border-radius: 0 4px 4px 0; text-align: right;}
+.fr-price{display: grid;}
+.fr-price__pp{font-size: 26px; font-weight: 700; line-height: 30px; color: #e8202a;}
+.fr-price__note{font-size: 12px; line-height: 16px; color: #959595;}
+.fr-total{min-height: 18px; font-size: 12px; line-height: 18px; color: #636363;}
+.fr-card .btn-default.btn1.fr-select{margin-top: 10px; padding: 10px 20px; font-size: 13px; letter-spacing: .04em;}
+
+/* Nothing matches */
+.fr-empty{margin-bottom: 30px; padding: 40px 24px; background: #fafafa; border: 1px dashed #e3e3e3; border-radius: 4px; text-align: center; color: #636363;}
+.fr-empty[hidden]{display: none;}
+.fr-empty > i{display: block; width: fit-content; margin: 0 auto 12px; font-size: 30px; color: #1cbbb4;}
+.fr-empty p{margin: 0 0 16px;}
+.fr-empty p b{display: block; color: #464646; font-size: 16px; margin-bottom: 4px;}
+.fr-empty .btn-default.btn1.fr-empty__reset{width: auto; padding: 8px 22px;}
+
+@media (max-width: 991px) {
+  .fr-card{grid-template-columns: minmax(0, 1fr);}
+  .fr-card__side{flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; border-left: 0; border-top: 1px dashed #e3e3e3; border-radius: 0 0 4px 4px; text-align: left;}
+  .fr-card .btn-default.btn1.fr-select{width: auto; margin: 0 0 0 auto;}
+  .fr-total{flex: 1;}
+}
+/* Sort tabs: four in a row down to 576px; on phones the sort menu in the results bar takes over */
+@media (max-width: 575px) {
+  .fr-sort{display: none;}
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  .col-sm-9:has(.fr-sort) .results-bar__sort{display: none;}
+  .fr-sort__btn{padding: 10px 12px 8px;}
+}
+@media (max-width: 767px) {
+  .fr-card__main{padding: 16px;}
+  .fr-card__side{padding: 14px 16px;}
+  .fr-leg{grid-template-columns: auto minmax(70px, 1fr) auto; gap: 8px 12px;}
+  .fr-leg__label{grid-column: 1 / -1; display: flex; gap: 8px;}
+  .fr-time{font-size: 18px;}
+}
+.fr-time, .fr-price__pp, .fr-total, .fr-sort__btn small, .fr-summary, .fr-path__dur{font-variant-numeric: lining-nums tabular-nums;}
+@media (max-width: 767px) {
+  .fr-summary > b, .fr-summary > [data-sum="route"]{flex-basis: 100%;}
+  .fr-summary > [data-sum="route"]::before, .fr-summary > [data-sum="dates"]::before{display: none;}
+}
+
+/* Touch screens: every control at least 40px tall */
+@media (max-width: 991px), (pointer: coarse) {
+  .results-side .filter-list li{padding: 0;}
+  .results-side .fchk{min-height: 40px;}
+  .filters-clear{min-height: 40px; padding: 0 2px;}
+  .results-search .opt__btn, .trip-card .opt__btn{min-height: 40px;}
+  .filter summary{padding-top: 13px; padding-bottom: 13px;}
+  /* small round buttons keep their look but get a 40px touch area */
+  .results-search .sf__clear::after, .results-search .sbar__swap::after{content: ""; position: absolute; inset: -9px; border-radius: 50%;}
+  .results-search .sbar__swap::after{inset: -4px;}
+}
+
+/* The trip box (search-deals.html) moves into the Filters sheet below 992px (js/results.js) */
+@media (max-width: 991px) {
+  .filters__trip{margin: 0 0 16px; padding: 0; background: none;}
+  .filters__trip .trip-card{margin: 0;}
+}
+/* Phones: the calendar and travelers panels fill the screen (style.css), so undo the right: auto above */
+@media (max-width: 575px) {
+  .trip-card .sf-cal, .trip-card .sf-trav{right: 0;}
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  .filters-panel .ul3.filters, .filters-panel .filters-sheet__foot{padding-left: max(16px, calc(50% - 300px)); padding-right: max(16px, calc(50% - 300px));}
+}
+
+/* Rating filter (radios): round marks with a teal dot. */
+.fchk--radio input{border-radius: 50%;}
+.fchk--radio input::before{content: ""; width: 8px; height: 8px; border-radius: 50%; background: #fff;}
+.fchk--radio .fstars{white-space: nowrap;}
+.filters-empty{margin: 12px 0 0; color: #636363; font-size: 14px;}
+/* search-cars: the sidebar search folds into the same summary card on phones. */
+@media (max-width: 991px) {
+  .results-search.is-collapsed .sidebar-search{display: none;}
+  .sidebar-block.results-search{padding: 0; background: none; border: 0;}
+  .sidebar-block.results-search .sidebar-search{padding: 18px; background: #f3f3f3; border-bottom: 3px solid #1cbbb4; border-radius: 0 0 4px 4px;}
+}
+/* search-cars sidebar search on desktop: keep the grey card's own padding; full-width Search button. */
+.sidebar-block.results-search{padding: 25px;}
+.sidebar-block .text-end .btn-cf-submit, .sidebar-block .btn-cf-submit{display: block; width: 100%;}
+@media (max-width: 991px) {
+  .sidebar-block.results-search{padding: 0;}
+}
+/* search-cars below 992px: the search (as the summary card) and the results use the full width; filters live in the sheet. */
+@media (max-width: 991px) {
+  .row > .col-sm-3.results-side:has(> .sidebar-block){display: block; width: 100%; max-width: 100%; flex: 0 0 100%; margin-bottom: 0;}
+}
+/* Rating radios: the mark centred beside two lines, stars on top and the words under them. */
+.fchk--radio{display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; row-gap: 2px; align-items: center;}
+.fchk--radio input{grid-row: 1 / span 2;}
+.fchk--radio .fstars{grid-column: 2; line-height: 1;}
+.fchk--radio > span:last-child{grid-column: 2; font-size: 13px; line-height: 1.2; color: #636363;}
+.filter-list li:has(> .fchk--radio){padding: 6px 0;}
+/* search-cars: the Search button always spans the card. */
+.sidebar-search .text-end, .sidebar-search > div:last-of-type:has(.btn-cf-submit){float: none; width: 100%; max-width: 100%; text-align: center;}
+.sidebar-search .btn-cf-submit{display: block; width: 100%; padding-left: 10px; padding-right: 10px; white-space: nowrap;}
+.sidebar-search__go{margin-top: 22px;}
+.sidebar-search .btn-cf-submit{text-transform: uppercase;}
+.fchk--radio{row-gap: 6px;}
+@media (max-width: 991px) {
+  .fchk--radio{row-gap: 8px;}
+  .filter-list li:has(> .fchk--radio){padding: 10px 0;}
+}
+
+/* Room between the top search box and the filters/results below it. */
+.results-search{margin-bottom: 36px;}
+@media (max-width: 991px) {
+  .results-search{margin-bottom: 16px;}
+}
+
+/* ============================= Loading skeletons ====================== */
+/* While .is-loading is on the results column (js/results.js), each card is
+   covered by a grey outline of itself with a soft light sweeping across. */
+.is-loading .row .thumbnail, .is-loading .fr-card{position: relative; overflow: hidden;}
+.is-loading .row .thumbnail::after, .is-loading .fr-card::after{content: ""; display: block; position: absolute; inset: 0; z-index: 5; border-radius: inherit; background-color: #fff; background-repeat: no-repeat;}
+/* Photo cards: photo, title, two lines of text, price and button. */
+.is-loading .row .thumbnail::after{
+  background-image: linear-gradient(#ebebeb, #ebebeb), linear-gradient(#ebebeb, #ebebeb), linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(#e3f6f5, #e3f6f5);
+  background-size: 100% 52%, 62% 16px, 86% 11px, 54% 11px, 38% 34px;
+  background-position: 0 0, 20px calc(52% + 22px), 20px calc(52% + 54px), 20px calc(52% + 74px), calc(100% - 20px) calc(100% - 20px);
+}
+/* Flight rows: airline mark, two legs, price block. */
+.is-loading .fr-card::after{
+  background-image: linear-gradient(#ebebeb, #ebebeb), linear-gradient(#ebebeb, #ebebeb), linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(#ebebeb, #ebebeb), linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(#e3f6f5, #e3f6f5), linear-gradient(#ebebeb, #ebebeb);
+  background-size: 40px 40px, 38% 16px, 26% 11px, 38% 16px, 26% 11px, 22% 40px, 16% 18px;
+  background-position: 22px 22px, 80px 24px, 80px 50px, 80px calc(100% - 46px), 80px calc(100% - 22px), calc(100% - 22px) calc(100% - 22px), calc(100% - 22px) 24px;
+}
+.is-loading .row .thumbnail::before, .is-loading .fr-card::before{content: ""; display: block; position: absolute; inset: 0; z-index: 6; background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.75) 50%, transparent 70%); transform: translateX(-100%); animation: skeleton-sweep 1.1s ease-in-out infinite;}
+@keyframes skeleton-sweep{to{transform: translateX(100%);}}
+.is-loading .results-side ~ .col-sm-9 .hl1, .is-loading .fr-empty{visibility: hidden;}
+@media (prefers-reduced-motion: reduce) {
+  .is-loading .row .thumbnail::before, .is-loading .fr-card::before{animation: none;}
+}
+
+/* ============================= Live results: count, chips, option counts, empty state ====================== */
+.results-line{margin: 0 0 0 auto; font-size: 14px; font-weight: 600; color: #464646; font-variant-numeric: tabular-nums lining-nums;}
+.results-chips{display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: -14px 0 24px;}
+.results-chip{display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px 6px 12px; border: 1px solid #b9e8e5; border-radius: 4px; background: #e8f8f7; color: #00857c; font: 600 13px/18px 'Raleway', sans-serif; cursor: pointer; transition: background .2s, border-color .2s;}
+.results-chip i{font-size: 11px; color: #00857c;}
+.results-chip:hover{background: #d6f2f0; border-color: #1cbbb4;}
+.results-chip:focus-visible{outline: 2px solid #1cbbb4; outline-offset: 2px;}
+.results-chips__clear{margin-left: 4px; font-size: 13px;}
+.fchk__count{margin-left: auto; padding-left: 8px; font-size: 12px; font-weight: 600; color: #959595; font-variant-numeric: tabular-nums lining-nums;}
+.fchk.is-empty{opacity: .45;}
+.results-empty{margin: 10px 0 40px; padding: 28px 24px; border: 1px dashed #e3e3e3; border-radius: 4px; background: #fafafa; text-align: center; color: #636363;}
+.results-empty b{display: block; margin-bottom: 4px; font-size: 16px; color: #464646;}
+.results-empty .link-btn{font-size: inherit;}
+.thumbnail .caption .txt2--facts{margin-top: 2px; font-size: 13px; line-height: 18px; color: #959595;}
+@media (max-width: 991px) {
+  .results-chips{margin-top: 0;}
+}

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+<meta charset="utf-8">
+<title>Manage booking | Travel Agency</title>
+<meta name="description" content="Change dates, add extras or cancel your booking.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="../../../../../cdn.jsdelivr.net/npm/bootstrap%405.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link href="../../../../../cdn.jsdelivr.net/npm/%40fortawesome/fontawesome-free%407.3.1/css/all.min.css" rel="stylesheet" integrity="sha384-qrALq7+6jBOZIQsNnT6xGkMDru64qD6uTlDra39xrt2SoXl4pO3FX6Roz/RpR/BS" crossorigin="anonymous">
+<link href="../../../../../cdn.jsdelivr.net/npm/animate.css%404.1.1/animate.min.css" rel="stylesheet" integrity="sha384-Gu3KVV2H9d+yA4QDpVB7VcOyhJlAVrcXd0thEjr4KznfaFPLe0xQJyonVxONa4ZC" crossorigin="anonymous">
+<link href="../../../../../cdn.jsdelivr.net/npm/swiper%4014.3.0/swiper-bundle.min.css" rel="stylesheet" integrity="sha384-xkKzAc7JSlGq3SLCZHugx/i0gfYZf6kaFzg3v9/wz0HtsAFYPLz7aUvCFTac8KBk" crossorigin="anonymous">
+<link rel="preload" href="fonts/raleway-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link href="css/style.css" rel="stylesheet">
+<link href="css/account.css" rel="stylesheet">
+</head>
+<body class="not-front page-about page-account">
+
+<div id="main">
+<a class="skip-link" href="#page-content">Skip to main content</a>
+
+<div class="top1_wrapper" role="region" aria-label="Contact details and language">
+  <div class="container">
+    <div class="top1 clearfix">
+      <div class="email1"><i class="fa-regular fa-envelope" aria-hidden="true"></i><a href="mailto:support@example.com">support@example.com</a></div>
+      <div class="phone1"><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+19175550100">+1 917 555 0100</a></div>
+      <div class="social_wrapper">
+        <ul class="social clearfix">
+          <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+          <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+          <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="#" aria-label="Vimeo"><i class="fa-brands fa-square-vimeo" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+      <div class="lang1">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false"><img class="flag" src="images/flags/gb.svg" width="20" height="12" alt="">English
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a class="dropdown-item" href="#" lang="de"><img class="flag" src="images/flags/de.svg" width="20" height="12" alt="">Deutsch</a></li>
+            <li><a class="dropdown-item" href="#" lang="ru"><img class="flag" src="images/flags/ru.svg" width="20" height="12" alt="">Русский</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="top2_wrapper">
+  <div class="container">
+    <div class="top2 clearfix">
+      <header>
+        <div class="logo_wrapper">
+          <a href="index.html" class="logo">
+            <img src="images/logo.svg" width="190" height="94" alt="Travel Agency" class="img-fluid">
+          </a>
+        </div>
+      </header>
+      <nav class="navbar navbar_ navbar-default" aria-label="Main menu">
+        <button type="button" class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+          <span class="visually-hidden">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-collapse navbar-collapse_ collapse">
+          <ul class="nav navbar-nav sf-menu clearfix">
+              <li class="sub-menu sub-menu-1"><a href="#">Home<em></em></a>
+                  <ul>
+                      <li><a href="index.html">Home Version 1</a></li>
+                    <li><a href="index-2.html">Home Version 2 (slideshow)</a></li>
+                    <li><a href="index-1.html">Home Version 3 (video)</a></li>
+                  </ul>
+              </li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="nav-optional"><a href="gallery.html">Gallery</a></li>
+            <li class="sub-menu sub-menu-1 has-mega"><a href="#">Pages<em></em></a>
+              <ul class="mega">
+                <li class="mega__col">
+                  <span class="mega__title">Search and results</span>
+                  <ul>
+                    <li><a href="flights.html">Flights</a></li>
+                    <li><a href="search-deals.html">Flight deals</a></li>
+                    <li><a href="search-flights.html">Search flights</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="search-hotel.html">Search hotels</a></li>
+                    <li><a href="cars.html">Rent a car</a></li>
+                    <li><a href="search-cars.html">Search cars</a></li>
+                    <li><a href="cruises.html">Cruises</a></li>
+                    <li><a href="search-cruise.html">Search cruises</a></li>
+                  </ul>
+                </li>
+                <li class="mega__col">
+                  <span class="mega__title">Booking</span>
+                  <ul>
+                    <li><a href="booking-flights.html">Flight details</a></li>
+                    <li><a href="booking-hotel.html">Hotel details</a></li>
+                    <li><a href="booking-cars.html">Car details</a></li>
+                    <li><a href="booking-cruise.html">Cruise details</a></li>
+                    <li><a href="review.html">Review your trip</a></li>
+                    <li><a href="booking-hotel-page.html">Checkout</a></li>
+                    <li><a href="booking-success.html">Booking confirmed</a></li>
+                    <li><a href="manage-booking.html">Manage a booking</a></li>
+                  </ul>
+                </li>
+                <li class="mega__col">
+                  <span class="mega__title">Account</span>
+                  <ul>
+                    <li><a href="sign-in.html">Sign in</a></li>
+                    <li><a href="account.html">Account and profile</a></li>
+                    <li><a href="trips.html">My trips</a></li>
+                    <li><a href="trip.html">Trip details</a></li>
+                    <li><a href="inbox.html">Inbox</a></li>
+                  </ul>
+                </li>
+                <li class="mega__col">
+                  <span class="mega__title">Explore and more</span>
+                  <ul>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="destination.html">Destination guide</a></li>
+                    <li><a href="help.html">Help center</a></li>
+                    <li><a href="profile0027.html?member=jynda">Our team</a></li>
+                    <li><a href="privacy.html">Privacy policy</a></li>
+                    <li><a href="terms.html">Terms &amp; conditions</a></li>
+                    <li><a href="404.html">Page not found</a></li>
+                    <li><a href="components.html">Components</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+           
+            <li class="sub-menu sub-menu-1"><a href="#">Blog<em></em></a>
+              <ul>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="post.html">Blog Post</a></li> 
+              </ul>
+            </li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li class="sub-menu sub-menu-1 nav-user"><a href="#"><img src="images/user1.jpg" width="32" height="32" alt="" data-initials="EC">Emily<span class="visually-hidden"> Clarke, account menu</span><em></em></a>
+              <ul class="nav-user__menu">
+                <li class="nav-user__who"><img src="images/user1.jpg" width="44" height="44" alt="" data-initials="EC"><span><b>Emily Clarke</b><small>emily.clarke@example.com</small><span class="nav-user__tier"><i class="fa-solid fa-crown" aria-hidden="true"></i>Gold member</span></span></li>
+                <li><a href="account.html"><i class="fa-solid fa-user" aria-hidden="true"></i>Account</a></li>
+                <li><a href="trips.html"><i class="fa-solid fa-suitcase-rolling" aria-hidden="true"></i>My trips</a></li>
+                <li><a href="inbox.html"><i class="fa-regular fa-comments" aria-hidden="true"></i>Inbox<span class="nav-user__count">3<span class="visually-hidden"> unread</span></span></a></li>
+                <li class="nav-user__out"><a href="sign-in.html"><i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>Sign out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<main id="page-content" tabindex="-1">
+
+
+<div class="page_banner"></div>
+
+<div class="breadcrumbs1_wrapper">
+  <div class="container">
+    <div class="breadcrumbs1"><a href="index.html">Home</a><span>/</span><a href="trips.html">My trips</a><span>/</span>Manage booking</div>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+    <div class="acc-head">
+      <div>
+        <h1 class="acc-title">Manage your booking</h1>
+        <p class="acc-lead"><a href="trip.html">Prague city break</a> · Fri, Oct 30 – Fri, Nov 6, 2026 · Confirmation <b>TA-233WE3455</b></p>
+      </div>
+      <div class="acc-head__actions">
+        <a class="acc-btn acc-btn--ghost" href="inbox.html"><i class="fa-regular fa-comments" aria-hidden="true"></i>Message us</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <section class="acc-card" aria-labelledby="overview-title">
+          <div class="acc-card__head">
+            <h2 class="acc-h2 acc-card__title" id="overview-title"><span class="acc-tile" aria-hidden="true"><i class="fa-solid fa-suitcase-rolling"></i></span>In this booking</h2>
+          </div>
+          <div class="mng-items">
+            <div class="mng-item" data-item="flights">
+              <span class="acc-badge" data-item-status>Ticketed</span>
+              <b>Flights, New York ⇄ Prague</b>
+              <small>Atlantica out, Northwind Airways back · 2 travelers</small>
+            </div>
+            <div class="mng-item" data-item="hotel">
+              <span class="acc-badge" data-item-status>Confirmed</span>
+              <b>Vltava Grand Hotel</b>
+              <small data-hotel-dates>Oct 30 – Nov 6 · 7 nights · Deluxe King</small>
+            </div>
+            <div class="mng-item" data-item="car">
+              <span class="acc-badge" data-item-status>Confirmed</span>
+              <b>Premium SUV</b>
+              <small>Prague Airport · Pay at pick-up</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="acc-card" id="dates" aria-labelledby="dates-title">
+          <div class="acc-card__head">
+            <h2 class="acc-h2 acc-card__title" id="dates-title"><span class="acc-tile" aria-hidden="true"><i class="fa-regular fa-calendar"></i></span>Change dates</h2>
+            <span class="acc-muted">Hotel and flights move together</span>
+          </div>
+          <form id="dates-form" novalidate>
+            <div class="acc-grid">
+              <div class="acc-field">
+                <label for="dt-in">Check-in</label>
+                <input class="acc-input" type="date" id="dt-in" name="checkin" value="2026-10-30" min="2026-10-17" max="2027-10-01" required>
+              </div>
+              <div class="acc-field">
+                <label for="dt-out">Check-out</label>
+                <input class="acc-input" type="date" id="dt-out" name="checkout" value="2026-11-06" min="2026-10-18" max="2027-10-31" required>
+              </div>
+            </div>
+            <div class="price-box" aria-live="polite">
+              <dl class="price-lines">
+                <div class="price-line"><dt>New stay</dt><dd data-d="nights">7 nights</dd></div>
+                <div class="price-line"><dt>Hotel difference ($150 a night)</dt><dd data-d="hotel">$0.00</dd></div>
+                <div class="price-line"><dt>Flight change fee (2 × $75)</dt><dd data-d="fee">$0.00</dd></div>
+                <div class="price-line"><dt>Fare difference</dt><dd data-d="fare">$0.00</dd></div>
+              </dl>
+              <div class="price-total price-total--teal"><span data-d="label">No change yet</span><output data-d="total">$0.00</output></div>
+            </div>
+            <p class="acc-error" data-d="error" hidden></p>
+            <div class="acc-actions mt-3">
+              <button class="acc-btn" type="submit" data-d="submit" disabled>Change dates</button>
+            </div>
+            <p class="acc-status" role="status"></p>
+          </form>
+        </section>
+
+        <section class="acc-card" id="extras" aria-labelledby="extras-title">
+          <div class="acc-card__head">
+            <h2 class="acc-h2 acc-card__title" id="extras-title"><span class="acc-tile" aria-hidden="true"><i class="fa-solid fa-chair"></i></span>Seats and bags</h2>
+            <span class="acc-muted">Atlantica AT 23 · New York to Paris</span>
+          </div>
+          <div class="seat-layout">
+            <div>
+              <div class="seatmap" id="seatmap" role="group" aria-label="Seat map, rows 30 to 35">
+                <span></span><span class="seatmap__label">A</span><span class="seatmap__label">B</span><span class="seatmap__label">C</span><span></span><span class="seatmap__label">D</span><span class="seatmap__label">E</span><span class="seatmap__label">F</span>
+              </div>
+              <ul class="seat-legend">
+                <li><span class="is-mine"></span>Your seats</li>
+                <li><span></span>Free</li>
+                <li><span class="is-plus"></span>Extra legroom, $45</li>
+                <li><span class="is-taken"></span>Taken</li>
+              </ul>
+            </div>
+            <div>
+              <fieldset class="acc-fieldset">
+                <legend>Choose a seat for</legend>
+                <div class="acc-checks">
+                  <label class="acc-radio"><input type="radio" name="seat-for" value="0" checked><span>Emily Clarke · <b data-seat-of="0">32A</b></span></label>
+                  <label class="acc-radio"><input type="radio" name="seat-for" value="1"><span>James Clarke · <b data-seat-of="1">32B</b></span></label>
+                </div>
+              </fieldset>
+              <p class="acc-hint">Pick a free seat on the map. Seats in row 30 have extra legroom.</p>
+              <div class="acc-field mt-4">
+                <span class="acc-label" id="bags-label">Extra checked bags</span>
+                <div class="stepper" role="group" aria-labelledby="bags-label">
+                  <button type="button" data-bags="-1" aria-label="One bag less" disabled><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
+                  <output id="bags-count" aria-live="polite">0</output>
+                  <button type="button" data-bags="1" aria-label="One bag more"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+                </div>
+                <p class="acc-hint">Up to 23 kg each · $70 per bag, round trip. One checked bag each is already included.</p>
+              </div>
+            </div>
+          </div>
+          <div class="acc-card__foot">
+            <div class="price-total price-total--teal flex-grow-1 m-0 p-0 border-0"><span>Extras to pay</span><output data-extras-total aria-live="polite">$0.00</output></div>
+            <button class="acc-btn" type="button" data-save-extras>Save seats and bags</button>
+          </div>
+          <p class="acc-status" role="status" data-extras-status></p>
+        </section>
+
+        <section class="acc-card" id="cancel" aria-labelledby="cancel-title">
+          <div class="acc-card__head">
+            <h2 class="acc-h2 acc-card__title" id="cancel-title"><span class="acc-tile" aria-hidden="true"><i class="fa-solid fa-xmark"></i></span>Cancel</h2>
+            <span class="acc-muted">Choose what to cancel and see your refund first</span>
+          </div>
+          <ul class="cancel-list">
+            <li><label class="fchk"><input type="checkbox" name="cancel" value="hotel" data-paid="1050" data-fee="0"><span><b>Vltava Grand Hotel, 7 nights</b><br>Free cancellation until Wed, Oct 28, 2026. Full refund of $1,050.00.</span></label></li>
+            <li><label class="fchk"><input type="checkbox" name="cancel" value="flights" data-paid="1458" data-fee="300"><span><b>Flights for 2 travelers</b><br>Cancellation fee $150 per traveler. Refund of $1,158.00.</span></label></li>
+            <li><label class="fchk"><input type="checkbox" name="cancel" value="car" data-paid="0" data-fee="0"><span><b>Premium SUV</b><br>Free to cancel. You pay at pick-up, so nothing has been charged.</span></label></li>
+          </ul>
+          <div class="price-box" aria-live="polite">
+            <dl class="price-lines">
+              <div class="price-line"><dt>Paid for the selected items</dt><dd data-c="paid">$0.00</dd></div>
+              <div class="price-line price-line--bad"><dt>Cancellation fees</dt><dd data-c="fee">$0.00</dd></div>
+            </dl>
+            <div class="price-total price-total--teal"><span>Your refund</span><output data-c="refund">$0.00</output></div>
+          </div>
+          <p class="acc-hint">Refunds go back to Visa •••• 4242 within 5 to 7 working days.</p>
+          <div class="acc-actions mt-3">
+            <button class="acc-btn acc-btn--danger" type="button" data-cancel-start disabled aria-controls="cancel-confirm" aria-expanded="false">Cancel selected</button>
+          </div>
+          <div class="cancel-confirm" id="cancel-confirm" hidden>
+            <p><b>Cancel <span data-c="what">these items</span>?</b> This cannot be undone. Your refund of <b data-c="refund2">$0.00</b> is sent today.</p>
+            <div class="acc-actions">
+              <button class="acc-btn acc-btn--red" type="button" data-cancel-yes>Yes, cancel</button>
+              <button class="acc-link" type="button" data-cancel-no>Keep my booking</button>
+            </div>
+          </div>
+          <p class="acc-status" role="status" data-cancel-status></p>
+        </section>
+      </div>
+
+      <div class="col-lg-4">
+        <aside class="acc-card acc-card--accent side-sticky" aria-labelledby="pay-title">
+          <h2 class="acc-h2" id="pay-title">Payment</h2>
+          <dl class="price-lines mt-3">
+            <div class="price-line"><dt>Flights, 2 × $729</dt><dd>$1,458.00</dd></div>
+            <div class="price-line"><dt>Vltava Grand Hotel, 7 nights</dt><dd>$1,050.00</dd></div>
+            <div class="price-line"><dt>Car, due at pick-up</dt><dd class="acc-muted">$510.30</dd></div>
+            <div class="price-line" data-sum="changes" hidden><dt>Changes and extras</dt><dd>$0.00</dd></div>
+            <div class="price-line price-line--good" data-sum="refund" hidden><dt>Refund on its way</dt><dd>$0.00</dd></div>
+          </dl>
+          <div class="price-total" aria-live="polite"><span>Paid so far</span><output data-sum="total">$2,508.00</output></div>
+          <p class="acc-hint">Paid Oct 16, 2026 with Visa •••• 4242.</p>
+          <ul class="assure">
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Free hotel cancellation until Oct 28</li>
+            <li><i class="fa-solid fa-headset" aria-hidden="true"></i>24/7 help on +1 917 555 0100</li>
+            <li><i class="fa-solid fa-flask" aria-hidden="true"></i>Demo page: nothing is changed or charged</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer class="bot1_wrapper">
+  <div class="container">
+    <div class="ft-top">
+      <a href="index.html" class="ft-logo">
+        <img src="images/logo2.svg" width="214" height="106" alt="Travel Agency">
+      </a>
+      <p class="ft-about">Flights, hotels, car rentals and cruises, planned by travel specialists who have been there first. One booking, one team to call.</p>
+      <ul class="social2">
+        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+    <div class="ft-grid">
+      <nav class="ft-col" aria-labelledby="ft-company">
+        <h2 class="ft-title" id="ft-company">Company</h2>
+        <ul class="ft-links">
+          <li><a href="about.html">About us</a></li>
+          <li><a href="profile0027.html?member=jynda">Our team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+      <nav class="ft-col" aria-labelledby="ft-book">
+        <h2 class="ft-title" id="ft-book">Book</h2>
+        <ul class="ft-links">
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="hotels.html">Hotels</a></li>
+          <li><a href="cars.html">Rent a car</a></li>
+          <li><a href="cruises.html">Cruises</a></li>
+          <li><a href="search-deals.html">Flight deals</a></li>
+          <li><a href="manage-booking.html">Manage a booking</a></li>
+        </ul>
+      </nav>
+      <nav class="ft-col" aria-labelledby="ft-support">
+        <h2 class="ft-title" id="ft-support">Support</h2>
+        <ul class="ft-links">
+          <li><a href="help.html">Help center</a></li>
+          <li><a href="trips.html">My trips</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms &amp; conditions</a></li>
+        </ul>
+      </nav>
+      <div class="ft-col ft-news">
+        <h2 class="ft-title" id="ft-newsletter">Newsletter</h2>
+        <p>Fare drops, new routes and travel ideas, twice a month.</p>
+        <form class="ft-form" action="#" data-newsletter novalidate>
+          <label class="visually-hidden" for="ft-email">Email address</label>
+          <div class="ft-field">
+            <input type="email" id="ft-email" name="email" placeholder="Your email address" autocomplete="email" required>
+            <button type="submit">Subscribe</button>
+          </div>
+          <p class="ft-note" data-newsletter-note role="status"></p>
+        </form>
+        <ul class="ft-contact">
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+19175550100">+1 917 555 0100</a></li>
+          <li><i class="fa-regular fa-envelope" aria-hidden="true"></i><a href="mailto:support@example.com">support@example.com</a></li>
+          <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>250 Travel Avenue, Suite 6, New York, NY 10001</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<div class="bot2_wrapper">
+  <div class="container ft-bottom">
+    <span class="copy">© 2026 Sanjida Priya. All rights reserved.</span>
+    <ul class="ft-legal">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="help.html">Help center</a></li>
+      <li class="ft-credit">Designed by <strong>Sanjida Priya</strong></li>
+    </ul>
+  </div>
+</div>
+
+
+</footer>
+
+</div>
+<script src="../../../../../cdn.jsdelivr.net/npm/bootstrap%405.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="../../../../../cdn.jsdelivr.net/npm/swiper%4014.3.0/swiper-bundle.min.js" integrity="sha384-nimz5qRuF8SOYqiuzkhgKleYiz6jIj9pUhB/LlAAsbB6I3fI9v9s5RMwMTzEyOAY" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+<script src="js/account.js"></script>
+</body>
+
+
+</html>

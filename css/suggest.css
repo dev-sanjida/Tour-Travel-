@@ -1,0 +1,12 @@
+/* Place suggestions under text boxes marked data-suggest (search-cars.html). Loaded on that page only. */
+.sg{position: relative;}
+.sg .cs__list{min-width: 100%; width: max-content; max-width: 320px;}
+.sg .cs__list li{display: flex; align-items: flex-start; justify-content: flex-start; gap: 10px; white-space: normal;}
+.sg .cs__list li i{margin-top: 3px; color: #1cbbb4;}
+.sg .cs__list li b{display: block; font-weight: 600; color: #464646;}
+.sg .cs__list li small{display: block; color: #959595; font-size: 12px;}
+.sg .cs__list li.is-active b{color: #00857c;}
+/* Rating: pick one (radio buttons), round with a teal dot. */
+.radio1 + .checkbox1-custom-label:before{border-radius: 50%;}
+.radio1:checked + .checkbox1-custom-label:before{content: ""; background: #fff; border: 5px solid #1cbbb4;}
+.radio1:focus-visible + .checkbox1-custom-label:before{outline: 2px solid #076f68; outline-offset: 2px;}

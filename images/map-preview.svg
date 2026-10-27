@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600">
+<!-- A stylised street map shown where Google Maps appears once an API key is set. -->
+<rect width="1600" height="600" fill="#eef3f2"/>
+<path d="M0 420 C260 380 420 470 640 430 S1060 330 1280 380 S1520 450 1600 430 V600 H0Z" fill="#d6ecea"/>
+<g fill="#e4ebe9"><rect x="60" y="40" width="220" height="140" rx="6"/><rect x="320" y="40" width="160" height="140" rx="6"/><rect x="520" y="40" width="260" height="140" rx="6"/><rect x="820" y="40" width="180" height="140" rx="6"/><rect x="1040" y="40" width="240" height="140" rx="6"/><rect x="1320" y="40" width="220" height="140" rx="6"/>
+<rect x="60" y="220" width="160" height="150" rx="6"/><rect x="260" y="220" width="260" height="150" rx="6"/><rect x="900" y="220" width="200" height="120" rx="6"/><rect x="1140" y="220" width="180" height="120" rx="6"/><rect x="1360" y="220" width="180" height="120" rx="6"/></g>
+<rect x="560" y="220" width="300" height="150" rx="6" fill="#d8ebd5"/>
+<g fill="none" stroke="#fff" stroke-linecap="round"><path d="M0 200 H1600" stroke-width="22"/><path d="M300 0 V600 M800 0 V600 M1300 0 V600" stroke-width="18"/><path d="M500 0 V200 M1020 0 V360 M240 200 V400 M880 200 V400" stroke-width="10"/><path d="M0 120 C300 140 500 100 800 120" stroke-width="8"/></g>
+<path d="M0 200 H1600" stroke="#f6e7b8" stroke-width="6"/>
+</svg>
